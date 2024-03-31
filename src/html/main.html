@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Header -->\r\n
+<div class="header" ng-class="rt.state">\r\n    <!--<div class="company-logo"></div>-->\r\n
+  <div class="app-state">
+    <div app-state></div>
+  </div>
+  \r\n
+  <div class="app-status" app-status></div>
+  \r\n    <!--<div class="product-logo"></div>-->\r\n
+</div>
+\r\n\r\n<!-- Main  --> \r\n
+<div class="main">\r\n
+  <div ask-question></div>
+  \r\n
+  <div register-interest></div>
+  \r\n
+  <div contact-us></div>
+  \r\n
+  <div welcome></div>
+  \r\n
+  <div dialog-modal></div>
+  \r\n
+  <div about-us></div>
+  \r\n
+  <div import-file></div>
+  \r\n
+  <div assign-cms-to-em></div>
+  \r\n
+  <div new-or-edit-campaign></div>
+  \r\n
+  <div edit-s88-unit-procedure-task></div>
+  \r\n
+  <div edit-s95-procedure-task></div>
+  \r\n
+  <div edit-s95-unit-procedure-task></div>
+  \r\n
+  <div plan-task></div>
+  \r\n
+  <div move-task></div>
+  \r\n
+  <div new-log-entry></div>
+  \r\n
+  <div select-instance></div>
+  \r\n
+  <div assign-s88-module></div>
+  \r\n
+  <div assign-s88-unit></div>
+  \r\n
+  <div assign-s95-module></div>
+  \r\n
+  <div assign-s95-work-unit></div>
+  \r\n
+  <div new-solution></div>
+  \r\n
+  <div upload-file></div>
+  \r\n
+  <div preview-image></div>
+  \r\n
+  <div replace-diagram></div>
+  \r\n
+  <div new-or-edit-parameter></div>
+  \r\n
+  <div open-formula></div>
+  \r\n
+  <div new-or-edit-formula></div>
+  \r\n
+  <div new-formula-parameter></div>
+  \r\n
+  <div new-or-edit-class-formula-parameter></div>
+  \r\n
+  <div new-or-edit-def-formula-parameter></div>
+  \r\n
+  <div new-or-edit-material-bill></div>
+  \r\n
+  <div open-material-bill></div>
+  \r\n
+  <div new-or-edit-material-bill-item></div>
+  \r\n
+  <div new-or-edit-material-class></div>
+  \r\n
+  <div new-or-edit-material-class-property></div>
+  \r\n
+  <div new-or-edit-material-class-test-specification></div>
+  \r\n
+  <div new-or-edit-material-definition></div>
+  \r\n
+  <div new-or-edit-material-def-property></div>
+  \r\n
+  <div new-or-edit-material-def-test-specification></div>
+  \r\n
+  <div new-or-edit-material-lot></div>
+  \r\n
+  <div new-or-edit-hazard-type></div>
+  \r\n
+  <div new-or-edit-equipment-class></div>
+  \r\n
+  <div new-or-edit-equipment-class-property></div>
+  \r\n
+  <div new-or-edit-equipment-class-test-specification></div>
+  \r\n
+  <div new-or-edit-equipment-definition></div>
+  \r\n
+  <div new-or-edit-equipment-def-property></div>
+  \r\n
+  <div new-or-edit-equipment-def-test-specification></div>
+  \r\n
+  <div new-or-edit-personnel-class></div>
+  \r\n
+  <div new-or-edit-personnel-class-property></div>
+  \r\n
+  <div new-or-edit-personnel-class-test-specification></div>
+  \r\n
+  <div new-or-edit-personnel-definition></div>
+  \r\n
+  <div new-or-edit-personnel-def-property></div>
+  \r\n
+  <div new-or-edit-personnel-def-test-specification></div>
+  \r\n
+  <div work-instruction-editor></div>
+  \r\n
+  <div add-work-instruction></div>
+  \r\n
+  <div delete-work-instruction></div>
+  \r\n
+  <div preview-work-instruction></div>
+  \r\n
+  <div add-section></div>
+  \r\n
+  <div edit-section></div>
+  \r\n
+  <div move-sections></div>
+  \r\n
+  <div new-entity></div>
+  \r\n
+  <div delete-confirmation></div>
+  \r\n
+  <div new-or-edit-procedural-node></div>
+  \r\n
+  <div edit-material-flow></div>
+  \r\n
+  <div create-module></div>
+  \r\n
+  <div new-message></div>
+  \r\n
+  <div warning></div>
+  \r\n
+  <div error></div>
+  \r\n
+  <div new-or-edit-snippet></div>
+  \r\n
+  <div call-command></div>
+  \r\n
+  <div import-export-snippets></div>
+  \r\n
+  <div import-export-templates></div>
+  \r\n
+  <div name-item></div>
+  \r\n
+  <div delete-item></div>
+  \r\n
+  <div select-item></div>
+  \r\n
+  <div new-recording></div>
+  \r\n
+  <div add-edit-cause-input></div>
+  \r\n
+  <div add-edit-effect></div>
+  \r\n
+  <div macro-settings></div>
+  \r\n
+  <div open-or-delete-solution></div>
+  \r\n
+  <div view-report></div>
+  \r\n
+  <div edit-report-templates></div>
+  \r\n
+  <div add-edit-cause></div>
+  \r\n
+  <div view-parameters></div>
+  \r\n
+  <div cause-and-effect></div>
+  \r\n
+  <div logic-sequencer></div>
+  \r\n
+  <div add-sequencer-step></div>
+  \r\n
+  <div add-sequencer-module-command></div>
+  \r\n
+  <div sequencer-settings></div>
+  \r\n\r\n
+  <script type="text/javascript">\r\n\r\n
+  $(document).ready(function () {\r\n\r\n
+
+    function calcSEHeight() {\r\n
+      var parentHeight = $(\'#TESEPanel\').height();\r\n\r\n                $(\'#TESEContent\').height(function () {\r\n                    return parentHeight - 24;\r\n                });\r\n\r\n                var childHeight = $(\'div.pane-2\').height();\r\n\r\n                $(\'#solutionTree1\').height(function () {\r\n                    return childHeight - 52 + (childHeight / 20);\r\n                });\r\n            }\r\n\r\n            calcSEHeight()\r\n\r\n            $(\'#TESEContent\').on(\'resize\', calcSEHeight);\r\n            $(window).on(\'resize\', calcSEHeight);\r\n            //$(\'#mainTab\').jqxTabs(\'disableAt\', 3);\r\n            //$(\'#myTabs\').jqxTabs(\'disableAt\', 2);\r\n        });\r\n\r\n    </script>
+  \r\n\r\n    <!--<div class="screen-recorder-palette" screen-recorder-palette style="margin-right:10px;"></div>-->\r\n
+  <div class="menu" menu></div>
+  \r\n
+  <div class="company-logo"></div>
+  \r\n
+  <div class="product-logo"></div>
+  \r\n
+  <div class="notification" notification></div>
+  \r\n
+  <div class="workspace" splitter-left-centre>\r\n\r\n
+    <div id="TESEPanel">\r\n
+      <div class="pane-1 pane-title-1"><span>&nbsp; Type Explorer</span></div>
+      \r\n\r\n
+      <div style="height:890px" splitter-top-bottom id="TESEContent">\r\n
+        <div class="pane-1">\r\n
+          <div class="pane-content-1" type-explorer></div>
+          \r\n
+        </div>
+        \r\n\r\n
+        <div class="pane-2">\r\n
+          <div class="pane-title-2"><span>&nbsp; Solution Explorer</span></div>
+          \r\n
+          <div id="solutionTree1" class="pane-content-2 solutionTree" solution-tree></div>
+          \r\n
+        </div>
+        \r\n
+      </div>
+      \r\n
+    </div>
+    \r\n\r\n
+    <div>\r\n
+      <div splitter-centre-right>\r\n
+        <div id="myTabs">\r\n                    <!--<div splitter-top-bottom>-->   <!--::main.settings.tabsDisabled-->
+          \r\n\r\n
+          <jqx-tabs jqx-settings="::main.settings.tabs" jqx-instance="main.mainTab" id="mainTab" class="tab">\r\n
+            <ul>\r\n
+              <li style="font-weight: 900; color: black">S88</li>
+              \r\n
+              <li><span title="Not available in demo version">S95</span></li>
+              \r\n
+              <li><span title="Not available in demo version">Resources</span></li>
+              \r\n
+              <li><span title="Not available in demo version">Campaign Manager</span></li>
+              \r\n
+              <li><span title="Not available in demo version">Batch Report</span></li>
+              \r\n
+              <li><span title="Not available in demo version">Work Instruction</span></li>
+              \r\n
+              <li style="font-weight: 900; color: black">Captured Images</li>
+              \r\n
+              <li><span title="Not available in demo version">Model</span></li>
+              \r\n                            <!--<li>Video</li>-->\r\n
+            </ul>
+            \r\n\r\n
+            <jqx-tabs jqx-settings="::main.settings.tabsDisabled" jqx-instance="main.s88Tab" id="s88Tab" class="tab">
+              \r\n
+              <ul>\r\n
+                <li style="font-weight: 900; color: black">Physical</li>
+                \r\n
+                <li><span title="Not available in demo version">Procedural</span></li>
+                \r\n
+                <!--<li><span title="Not available in demo version">Formula</span></li>-->\r\n
+                <li><span title="Not available in demo version">Design Specs</span></li>
+                \r\n
+                <li><span title="Not available in demo version">Factory Acceptance Tests</span></li>
+                \r\n
+              </ul>
+              \r\n
+              <div class="tab" s88-physical></div>
+              \r\n
+              <div class="tab" s88-procedural></div>
+              \r\n                            <!--<div class="tab" formula standard="S88"></div>-->\r\n
+              <div class="tab reports" s88-reports></div>
+              \r\n
+              <div class="tab reports" s88-fat-reports></div>
+              \r\n
+            </jqx-tabs>
+            \r\n\r\n
+            <!--<jqx-tabs jqx-settings="::main.settings.tabs" jqx-instance="main.s95Tab" id="s95Tab" class="tab">\r\n                        <ul>\r\n                            <li>Physical</li>\r\n                            <li>Procedural</li>-->
+            \r\n                        <!--<li>Formula</li>-->\r\n
+            <!--<li>Material Bill</li>\r\n                            <li>Design Specs</li>\r\n                            <li>Factory Acceptance Tests</li>\r\n                        </ul>\r\n                        <div class="tab" s95-physical></div>\r\n                        <div class="tab" s95-procedural></div>-->
+            \r\n                        <!--<div class="tab" formula standard="S95"></div>-->\r\n
+            <!--<div class="tab" material-bill></div>\r\n                            <div class="tab reports" s95-reports></div>\r\n                            <div class="tab reports" s95-fat-reports></div>\r\n                        </jqx-tabs>-->
+            \r\n\r\n
+            <div><p style="text-align: center; margin: 2em; font-size: 1.2em">The demo version is limited to the \'S88\'
+              and \'Captured Images\' features.<br/> <br/>Please contact us for access to the full version.</p></div>
+            \r\n
+            <div><p style="text-align: center; margin: 2em; font-size: 1.2em">The demo version is limited to the \'S88\'
+              and \'Captured Images\' features.<br/> <br/>Please contact us for access to the full version.</p></div>
+            \r\n\r\n\r\n
+            <!--<jqx-tabs jqx-settings="::main.settings.tabs" jqx-instance="main.resourceTab" id="resourceTab" class="tab">\r\n                            <ul>\r\n                                <li>Material</li>\r\n                                <li>Equipment</li>\r\n                                <li>Personnel</li>\r\n                            </ul>\r\n\r\n                            <div id="materials" class="tab" ng-controller="MaterialController as mtrl">\r\n                                <div toolbar bar="::mtrl.getBar()"></div>\r\n                                <jqx-tabs jqx-settings="::main.settings.tabs" jqx-instance="main.materialTab" id="materialTab" class="tab">\r\n                                    <ul>\r\n                                        <li>Classes</li>\r\n                                        <li>Class Properties</li>\r\n                                        <li>Class Test Specifications</li>\r\n                                        <li>Definitions</li>\r\n                                        <li>Definition Properties</li>\r\n                                        <li>Definition Test Specifications</li>\r\n                                        <li>Lots</li>\r\n                                        <li>Sublots</li>\r\n                                        <li>SubSublots</li>\r\n                                        <li>Hazard Types</li>\r\n                                    </ul>\r\n                                    <div class="resource-tab" material-classes mtrl="mtrl"></div>\r\n                                    <div class="resource-tab" material-properties type="Class" mtrl="mtrl"></div>\r\n                                    <div class="resource-tab" material-test-specifications type="Class" mtrl="mtrl"></div>\r\n                                    <div class="resource-tab" material-definitions mtrl="mtrl"></div>\r\n                                    <div class="resource-tab" material-properties type="Definition" mtrl="mtrl"></div>\r\n                                    <div class="resource-tab" material-test-specifications type="Definition" mtrl="mtrl"></div>\r\n                                    <div class="resource-tab" material-lots type="Lot" mtrl="mtrl"></div>\r\n                                    <div class="resource-tab" material-lots type="Sublot" mtrl="mtrl"></div>\r\n                                    <div class="resource-tab" material-lots type="SubSublot" mtrl="mtrl"></div>\r\n                                    <div class="resource-tab" material-hazard-types mtrl="mtrl"></div>\r\n                                </jqx-tabs>\r\n                            </div>\r\n\r\n                            <div id="equipment" class="tab" ng-controller="EquipmentController as equipment">\r\n                                <div toolbar bar="::equipment.getBar()"></div>\r\n                                <jqx-tabs jqx-settings="::main.settings.tabs" jqx-instance="main.equipmentTab" id="equipmentTab" class="tab">\r\n                                    <ul>\r\n                                        <li>Classes</li>\r\n                                        <li>Class Properties</li>\r\n                                        <li>Class Test Specifications</li>\r\n                                        <li>Definitions</li>\r\n                                        <li>Definition Properties</li>\r\n                                        <li>Definition Test Specifications</li>\r\n                                    </ul>\r\n                                    <div class="resource-tab" equipment-classes equipment="equipment"></div>\r\n                                    <div class="resource-tab" equipment-properties type="Class" equipment="equipment"></div>\r\n                                    <div class="resource-tab" equipment-test-specifications type="Class" equipment="equipment"></div>\r\n                                    <div class="resource-tab" equipment-definitions equipment="equipment"></div>\r\n                                    <div class="resource-tab" equipment-properties type="Definition" equipment="equipment"></div>\r\n                                    <div class="resource-tab" equipment-test-specifications type="Definition" equipment="equipment"></div>\r\n                                </jqx-tabs>\r\n                            </div>\r\n\r\n                            <div id="personnel" class="tab" ng-controller="PersonnelController as personnel">\r\n                                <div toolbar bar="::personnel.getBar()"></div>\r\n                                <jqx-tabs jqx-settings="::main.settings.tabs" jqx-instance="main.personnelTab" id="personnelTab" class="tab">\r\n                                    <ul>\r\n                                        <li>Classes</li>\r\n                                        <li>Class Properties</li>\r\n                                        <li>Class Test Specifications</li>\r\n                                        <li>Definitions</li>\r\n                                        <li>Definition Properties</li>\r\n                                        <li>Definition Test Specifications</li>\r\n                                    </ul>\r\n                                    <div class="resource-tab" personnel-classes personnel="personnel"></div>\r\n                                    <div class="resource-tab" personnel-properties type="Class" personnel="personnel"></div>\r\n                                    <div class="resource-tab" personnel-test-specifications type="Class" personnel="personnel"></div>\r\n                                    <div class="resource-tab" personnel-definitions personnel="personnel"></div>\r\n                                    <div class="resource-tab" personnel-properties type="Definition" personnel="personnel"></div>\r\n                                    <div class="resource-tab" personnel-test-specifications type="Definition" personnel="personnel"></div>\r\n                                </jqx-tabs>\r\n                            </div>\r\n                        </jqx-tabs>-->
+            \r\n
+            <!--<div id="campaignManager" class="tab" ng-controller="CampaignManagerController as cm">\r\n                            <div toolbar bar="::cm.getBar()"></div>\r\n                            <jqx-tabs jqx-settings="::main.settings.tabs" jqx-instance="main.campaignTab" id="campaignTab" class="tab">\r\n                                <ul>\r\n                                    <li>Overview</li>\r\n                                    <li>Gantt</li>\r\n                                </ul>\r\n                                <div ng-controller="CampaignOverviewController as co">\r\n                                    <div class="overview-tab" campaign-overview></div>\r\n                                </div>\r\n                                <div ng-controller="CampaignGanttController as cg">\r\n                                    <div class="gantt-tab" campaign-gantt></div>\r\n                                </div>\r\n                            </jqx-tabs>\r\n                        </div>-->
+            \r\n
+            <div><p style="text-align: center; margin: 2em; font-size: 1.2em">The demo version is limited to the \'S88\'
+              and \'Captured Images\' features.<br/> <br/>Please contact us for access to the full version.</p></div>
+            \r\n\r\n
+            <div><p style="text-align: center; margin: 2em; font-size: 1.2em">The demo version is limited to the \'S88\'
+              and \'Captured Images\' features.<br/> <br/>Please contact us for access to the full version.</p></div>
+            \r\n
+            <div><p style="text-align: center; margin: 2em; font-size: 1.2em">The demo version is limited to the \'S88\'
+              and \'Captured Images\' features.<br/> <br/>Please contact us for access to the full version.</p></div>
+            \r\n
+            <div class="tab screen-capture-container" capture-screen></div>
+            \r\n
+            <div><p style="text-align: center; margin: 2em; font-size: 1.2em">The demo version is limited to the \'S88\'
+              and \'Captured Images\' features.<br/> <br/>Please contact us for access to the full version.</p></div>
+            \r\n\r\n                        <!--<div class="tab batch-report" batch-report></div>-->\r\n
+            <!--<div class="tab" work-instruction></div>\r\n                        <div class="tab screen-capture-container" capture-screen></div>\r\n                        <div class="tab" opc-model></div>-->
+            \r\n                        <!--<div class="tab" screen-recorder-player></div>-->\r\n
+          </jqx-tabs>
+          \r\n\r\n
+          <!--<div class="layer1">\r\n                        <jqx-panel id="testPanel" jqx-settings="::main.ironPythonPanel">\r\n                            <div class="ip-manager" ng-controller="IronPythonManagerController as ipm">\r\n                                <div toolbar bar="::ipm.getBar()"></div>\r\n                                <div class="tab output-tabs" iron-python-tabs ipm="ipm">\r\n                                    <ul>\r\n                                        <li>Console</li>\r\n                                        <li>Output</li>\r\n                                        <li>Interpreter</li>\r\n                                    </ul>\r\n                                    <div class="editor-container" console></div>\r\n                                    <div class="output" output></div>\r\n                                    <div class="editor-container" interpreter></div>\r\n                                </div>\r\n                            </div>\r\n                        </jqx-panel>\r\n                    </div>-->
+          \r\n                    <!--</div>-->\r\n
+        </div>
+        \r\n\r\n
+        <div>\r\n
+          <div class="pane" ng-controller="MacroController as mac">\r\n
+            <div class="pane-title"><span>&nbsp; Event Recorder</span></div>
+            \r\n
+            <div class="pane-content" macro-editor></div>
+            \r\n
+          </div>
+          \r\n
+          <div class="pane" ng-controller="FaceplateController as fp">\r\n
+            <div class="faceplate-title"><span>&nbsp; Faceplate</span></div>
+            \r\n
+            <div class="faceplate-content faceplate" faceplate></div>
+            \r\n
+            <div class="faceplate-footer">\r\n
+              <jqx-button jqx-settings="::fp.settings.button2" jqx-instance="fp.widgets.update" ng-click="fp.update()"
+                          ng-disabled="fp.canUpdate()">Update
+              </jqx-button>
+              \r\n
+            </div>
+            \r\n
+          </div>
+          \r\n
+        </div>
+        \r\n
+      </div>
+      \r\n
+    </div>
+    \r\n\r\n\r\n
+  </div>
+  \r\n
+</div>
+</html>

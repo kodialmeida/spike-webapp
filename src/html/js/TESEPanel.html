@@ -1,0 +1,52 @@
+<script type="text/javascript">
+
+  $(document).ready(function () {
+
+    function calcSEHeight() {
+      var parentHeight = $('#TESEPanel').height();
+
+      $('#TESEContent').height(function () {
+        return parentHeight - 24;
+      });
+
+      var childHeight = $('div.pane-2').height();
+
+      $('#solutionTree1').height(function () {
+        return childHeight - 52 + (childHeight / 20);
+      });
+    }
+
+    calcSEHeight()
+
+    $('#TESEContent').on('resize', calcSEHeight);
+    $(window).on('resize', calcSEHeight);
+    //$('#mainTab').jqxTabs('disableAt', 3);
+    //$('#myTabs').jqxTabs('disableAt', 2);
+  });
+
+</script>
+
+<!--<div class="screen-recorder-palette" screen-recorder-palette style="margin-right:10px;"></div>-->
+<div class="menu" menu></div>
+<div class="company-logo"></div>
+<div class="product-logo"></div>
+<div class="notification" notification></div>
+<div class="workspace" splitter-left-centre>
+
+  <div id="TESEPanel">
+    <div class="pane-1 pane-title-1"><span>&nbsp; Type Explorer</span></div>
+
+    <div style="height:890px" splitter-top-bottom id="TESEContent">
+      <div class="pane-1">
+        <div class="pane-content-1" type-explorer></div>
+      </div>
+
+      <div class="pane-2">
+        <div class="pane-title-2"><span>&nbsp; Solution Explorer</span></div>
+        <div id="solutionTree1" class="pane-content-2 solutionTree" solution-tree></div>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <div splitter-centre-right>

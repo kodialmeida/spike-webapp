@@ -1,0 +1,31 @@
+<jqx-notification jqx-settings="admin.settings.notification" jqx-instance="admin.ntf.success" jqx-template="success">
+  <div id="ntfSuccess"></div>
+</jqx-notification>
+<jqx-notification jqx-settings="admin.settings.notification" jqx-instance="admin.ntf.error" jqx-template="error">
+  <div id="ntfError"></div>
+</jqx-notification>
+<div class="nav-bar" ng-class="{menu:vm.user.isAuth}">
+  <ul>
+    <li><a ng-click="vm.logout()">Logout</a></li>
+  </ul>
+</div>
+<div class="body-table admin">
+  <div class="body-cell body-cell-admin">
+    <div class="body-content"><h3>Application Users</h3>
+      <jqx-tabs jqx-settings="admin.settings.tabs" jqx-instance="admin.tabs" jqx-on-created="admin.created(admin.tabs)">
+        <ul>
+          <li>List</li>
+          <li>Add</li>
+          <li>Remove</li>
+          <li>Update</li>
+          <li>Activity</li>
+        </ul>
+        <div list-users></div>
+        <div add-user></div>
+        <div remove-user></div>
+        <div update-user></div>
+        <div list-user-activity></div>
+      </jqx-tabs>
+    </div>
+  </div>
+</div>

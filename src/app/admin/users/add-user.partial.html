@@ -1,0 +1,107 @@
+<div class="tab" ng-controller="AddUserController as vm">
+<form class="form" name="vm.form" novalidate autocomplete="off">
+  <table>
+    <tr>
+      <td><label>Role:</label></td>
+      <td><select name="role" ng-model="vm.role" ng-options="role as role for role in vm.roles"
+                  ng-required="true"></select></td>
+      <td>
+        <div class="error" ng-messages="vm.form.role.$error">
+          <div class="error-message" ng-message="required">Required....</div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td><label>FirstName:</label></td>
+      <td><input type="text" name="firstName" ng-model="vm.firstName" ng-required="true" spellcheck="false"></td>
+      <td>
+        <div class="error" ng-messages="vm.form.firstName.$error">
+          <div class="error-message" ng-message="required">Required....</div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td><label>LastName:</label></td>
+      <td><input type="text" name="lastName" ng-model="vm.lastName" ng-required="true" spellcheck="false"></td>
+      <td>
+        <div class="error" ng-messages="vm.form.lastName.$error">
+          <div class="error-message" ng-message="required">Required....</div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td><label>Company:</label></td>
+      <td><input type="text" name="company" ng-model="vm.company" ng-required="true" spellcheck="false"></td>
+      <td>
+        <div class="error" ng-messages="vm.form.company.$error">
+          <div class="error-message" ng-message="required">Required....</div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td><label>Email:</label></td>
+      <td><input type="email" name="email" ng-model="vm.email" ng-required="true" spellcheck="false"></td>
+      <td>
+        <div class="error" ng-messages="vm.form.email.$error">
+          <div class="error-message" ng-message="required">Required....</div>
+          <div class="error-message" ng-message="pattern">Invalid....</div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td><label>UserName:</label></td>
+      <td><input type="text" name="userName" ng-model="vm.userName" ng-required="true" spellcheck="false"></td>
+      <td>
+        <div class="error" ng-messages="vm.form.userName.$error">
+          <div class="error-message" ng-message="required">Required....</div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td><label>Password:</label></td>
+      <td><input type="text" name="password" ng-model="vm.password" ng-required="true" password spellcheck="false"></td>
+      <td>
+        <div class="error" ng-messages="vm.form.password.$error">
+          <div class="error-message" ng-message="required">Required....</div>
+          <div class="error-message" ng-message="password">{{ vm.messages.password }}</div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td><label>Confirm Password:</label></td>
+      <td><input type="text" name="confirmPassword" ng-model="vm.confirmPassword" ng-required="true" match="password"
+                 spellcheck="false"></td>
+      <td>
+        <div class="error" ng-messages="vm.form.confirmPassword.$error">
+          <div class="error-message" ng-message="required">Required....</div>
+          <div class="error-message" ng-message="match">Passwords must match....</div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td><label>Domain:</label></td>
+      <td><input type="text" name="domain" ng-model="vm.domain" ng-required="vm.role!==\'Admin\'"
+                 ng-disabled="vm.role===\'Admin\'" spellcheck="false"></td>
+      <td>
+        <div class="error" ng-messages="vm.form.domain.$error">
+          <div class="error-message" ng-message="required">Required....</div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td><label>Timeout:</label></td>
+      <td><input type="date" name="timeout" ng-model="vm.timeout" ng-required="vm.role!==\'Admin\'"
+                 ng-disabled="vm.role===\'Admin\'"></td>
+      <td>
+        <div class="error" ng-messages="vm.form.timeout.$error">
+          <div class="error-message" ng-message="required">Required....</div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2" style="text-align: center">
+        <button class="form-submit-btn btn btn-success" ng-disabled="!vm.form.$valid" ng-click="vm.add()">Add</button>
+      </td>
+    </tr>
+  </table>
+</form></div>

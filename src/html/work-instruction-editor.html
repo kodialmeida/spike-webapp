@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+
+<body>
+<div class="wi-editor-container">
+  <jqx-editor id="work-instruction-editor" jqx-instance="modal.editor" ng-model="modal.content"
+              jqx-settings="::modal.editorSettings"></jqx-editor>
+
+</div>
+<div class="wi-editor-btn-container">
+  <jqx-button ng-click="modal.close()" jqx-settings="::modal.btn.cancel">Cancel</jqx-button>
+
+  <jqx-button ng-click="modal.save()" jqx-settings="::modal.btn.okay">Ok</jqx-button>
+
+</div>
+</body>
+
+</html>

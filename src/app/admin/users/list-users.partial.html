@@ -1,0 +1,53 @@
+<div class="tab" ng-controller="ListUsersController as vm">
+  <div class="user-container">
+    <div class="user-search"><label>Search</label><input type="text" name="searchText" ng-model="vm.searchText"
+                                                         spellcheck="false"></div>
+    <div class="user-list">
+      <ul>
+        <li class="user" ng-repeat="user in admin.users | orderBy:\'dateAdded\' | filter:vm.searchText"
+            ng-click="vm.select(user, $index)" ng-class="{\'selected-user\': $index===vm.index}">{{ user.name }}
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="user-details">
+    <table>
+      <tr>
+        <td><label>Name:</label></td>
+        <td><input type="text" name="name" ng-model="vm.user.name" spellcheck="false" ng-readonly="true"></td>
+      </tr>
+      <tr>
+        <td><label>Company:</label></td>
+        <td><input type="text" name="company" ng-model="vm.user.company" spellcheck="false" ng-readonly="true"></td>
+      </tr>
+      <tr>
+        <td><label>Email:</label></td>
+        <td><input type="text" name="email" ng-model="vm.user.email" spellcheck="false" ng-readonly="true"></td>
+      </tr>
+      <tr>
+        <td><label>UserName:</label></td>
+        <td><input type="text" name="userName" ng-model="vm.user.userName" spellcheck="false" ng-readonly="true"></td>
+      </tr>
+      <tr>
+        <td><label>Role:</label></td>
+        <td><input type="text" name="role" ng-model="vm.user.role" spellcheck="false" ng-readonly="true"></td>
+      </tr>
+      <tr>
+        <td><label>Domain:</label></td>
+        <td><input type="text" name="domain" ng-model="vm.user.domain" spellcheck="false" ng-readonly="true"></td>
+      </tr>
+      <tr>
+        <td><label>Timeout:</label></td>
+        <td><input type="date" name="timeout" ng-model="vm.user.timeout" ng-readonly="true"></td>
+      </tr>
+      <tr>
+        <td><label>Date Added:</label></td>
+        <td><input type="date" name="dateAdded" ng-model="vm.user.dateAdded" ng-readonly="true"></td>
+      </tr>
+      <tr>
+        <td><label>Last Login:</label></td>
+        <td><input type="datetime-local" name="name" ng-model="vm.user.lastLogin" ng-readonly="true"></td>
+      </tr>
+    </table>
+  </div>
+</div>'

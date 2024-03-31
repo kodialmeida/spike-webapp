@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="spike" ng-strict-di>
+<head>
+  <meta charset="utf-8">
+  <meta name="author" content="HAL Software Limited">
+  <meta name="Copyright" content="Copyright (c) 2015 HAL Software limited. All rights reserved.">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <base href="/">
+
+  <title>Spike</title>
+  <link rel="shortcut icon" href="/images/favicon.ico" />
+  <link href="/app/app.css" rel="stylesheet"></head>
+<body ng-controller="MainController as main">
+
+<div class="initialiserWindow" initialiser></div>
+
+<div class="app-body" keypress-events>
+  <div class="route" ng-view=""></div>
+</div>
+
+<div class="spinnerWindow" spinner-modal></div>
+<div class="initialiserWindow" progress-bar></div>
+
+<script src="/scripts/jquery.min.js"></script>
+<script src="/scripts/angular.min.js"></script>
+<script src="/scripts/angular-local-storage.min.js"></script>
+<script src="/scripts/breeze.debug.js"></script>
+<script src="/scripts/breeze.bridge.angular.js"></script>
+<script src="/scripts/jquery.signalR.min.js"></script>
+<script src="/scripts/jqx-all.js"></script>
+<script src="/scripts/jqxangular.js"></script>
+<script src="/scripts/ace.min.js"></script>
+<script src="/scripts/ext-language_tools.min.js"></script>
+<script src="/scripts/mode-python.min.js"></script>
+<script src="/scripts/python.min.js"></script>
+<script src="/scripts/theme-monokai.min.js"></script>
+<script src="/scripts/theme-tomorrow_night_bright.min.js"></script>
+<script src="/scripts/angular-base64-upload.min.js"></script>
+<script src="/scripts/angular-messages.min.js"></script>
+<script src="/scripts/angular-sanitize.min.js"></script>
+<script src="/scripts/DlhSoft.ProjectData.GanttChart.HTML.Controls.js"></script>
+<script src="/scripts/Filesaver.js"></script>
+<script src="/scripts/jquery.ui.js"></script>
+<script src="/scripts/go.js"></script>
+<script src="/scripts/html2canvas.min.js"></script>
+<script src="/scripts/jquery.hotkeys.js"></script>
+<script src="/scripts/marknote.js"></script>
+<script src="/scripts/moment.min.js"></script>
+<script src="/scripts/ng-sortable.min.js"></script>
+<script src="/scripts/sortable.min.js"></script>
+<script src="/scripts/angular-route.min.js"></script>
+<script src="/scripts/hubs.js"></script>
+<!--<script src="/scripts/castify-api.js"></script>-->
+
+<footer>
+
+
+</footer>
+
+
+<script type="text/javascript" src="/app/app.js"></script></body>
+</html>

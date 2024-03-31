@@ -1,0 +1,88 @@
+<div class="tab" ng-controller="UpdateUserController as vm">
+  <form class="form" name="vm.form1" novalidate autocomplete="off">
+    <table>
+      <tr>
+        <td><label>User:</label></td>
+        <td><select ng-model="vm.user"
+                    ng-options="user as user.userName + \' (\' + user.name + \')\' for user in admin.users | orderBy:\'userName\'"
+                    ng-change="vm.userSelected(vm.user)"></select></td>
+        <td></td>
+      </tr>
+    </table>
+  </form>
+  <form class="form" name="vm.form2" novalidate autocomplete="off"><h5>Update Password</h5>
+    <table style="margin-top:10px">
+      <tr>
+        <td><label>Password:</label></td>
+        <td><input type="text" name="password" ng-model="vm.password" ng-required="true" password spellcheck="false"
+                   ng-disabled="!vm.user"></td>
+        <td>
+          <div class="error" ng-messages="vm.form2.password.$error">
+            <div class="error-message" ng-message="required">Required....</div>
+            <div class="error-message" ng-message="password">{{ vm.messages.password }}</div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td><label>Confirm Password:</label></td>
+        <td><input type="text" name="confirmPassword" ng-model="vm.confirmPassword" ng-required="true" match="password"
+                   spellcheck="false" ng-disabled="!vm.user"></td>
+        <td>
+          <div class="error" ng-messages="vm.form2.confirmPassword.$error">
+            <div class="error-message" ng-message="required">Required....</div>
+            <div class="error-message" ng-message="match">Passwords must match....</div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2" style="text-align: center">
+          <button class="form-submit-btn btn btn-success" ng-disabled="!vm.user || !vm.form2.$valid"
+                  ng-click="vm.updatePassword(vm.user, vm.password, vm.confirmPassword)">Update
+          </button>
+        </td>
+      </tr>
+    </table>
+  </form>
+  <form class="form" name="vm.form3" novalidate autocomplete="off"><h5>Update Domain</h5>
+    <table style="margin-top:10px">
+      <tr>
+        <td><label>Domain:</label></td>
+        <td><input type="text" name="domain" ng-model="vm.domain" ng-required="true" spellcheck="false"
+                   ng-disabled="!vm.user||vm.user.role===\'Admin\'"></td>
+        <td>
+          <div class="error" ng-messages="vm.form3.domain.$error">
+            <div class="error-message" ng-message="required">Required....</div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2" style="text-align: center">
+          <button class="form-submit-btn btn btn-success" ng-disabled="!vm.user || !vm.form3.$valid"
+                  ng-click="vm.updateDomain(vm.user, vm.domain)">Update
+          </button>
+        </td>
+      </tr>
+    </table>
+  </form>
+  <form class="form" name="vm.form4" novalidate autocomplete="off"><h5>Update Timeout</h5>
+    <table style="margin-top:10px">
+      <tr>
+        <td><label>Timeout:</label></td>
+        <td><input type="date" name="timeout" ng-model="vm.timeout" ng-required="true"
+                   ng-disabled="!vm.user||vm.user.role===\'Admin\'"></td>
+        <td>
+          <div class="error" ng-messages="vm.form4.timeout.$error">
+            <div class="error-message" ng-message="required">Required....</div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2" style="text-align: center">
+          <button class="form-submit-btn btn btn-success" ng-disabled="!vm.user || !vm.form4.$valid"
+                  ng-click="vm.updateTimeout(vm.user, vm.timeout)">Update
+          </button>
+        </td>
+      </tr>
+    </table>
+  </form>
+</div>

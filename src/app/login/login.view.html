@@ -1,0 +1,22 @@
+<div class="body-table">
+  <div class="body-cell body-cell-login">
+    <div class="body-form-content"><img src="images/hal-logo.png" style="width:100%;height:100%;margin-bottom:100px">
+      <form name="login.form" novalidate autocomplete="off">
+        <jqx-input jqx-settings="login.settings.input" name="name" placeholder="Username" ng-model="login.name"
+                   ng-required="true" autofocus ng-change="login.onChange()"></jqx-input>
+        <div class="error" ng-messages="login.form.name.$error">
+          <div ng-message="required">Required....</div>
+        </div>
+        <jqx-password-input jqx-settings="login.settings.pass" name="pass" placeholder="Password" ng-model="login.pass"
+                            ng-required="true" ng-change="login.onChange()"></jqx-password-input>
+        <div class="error" ng-messages="login.form.pass.$error">
+          <div ng-message="required">Required....</div>
+        </div>
+        <jqx-button style="height:24px" class="form-submit-btn" jqx-settings="login.settings.btn"
+                    ng-disabled="!login.form.$valid" ng-click="login.login(login.name, login.pass)">Sign In
+        </jqx-button>
+        <div class="form-response form-invalid-response" ng-hide="login.message == \'\'">{{ login.message }}</div>
+      </form>
+    </div>
+  </div>
+</div>

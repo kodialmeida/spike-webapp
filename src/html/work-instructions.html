@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<div class="wi">
+  <div class="wi-title">WorkInstruction: {{vm.selectedForm}}</div>
+  <p></p>
+  <div class="wi-btn-left"> <jqx-button class="wi-btn-row" jqx-settings="::vm.settings.btn"
+                                        ng-click="vm.createWorkInstruction()" ng-disabled="vm.canCreateForm()">Create Instruction</jqx-button>
+    <jqx-button class="wi-btn-row" jqx-settings="::vm.settings.btn" ng-click="vm.previewWorkInstruction()"
+                ng-disabled="!vm.formsTable.getSelection().length||!vm.formsTable.getSelection()[0].sections.length">Preview
+      Instruction</jqx-button> <jqx-button class="wi-btn-row" jqx-settings="::vm.settings.btn"
+                                           ng-click="vm.deleteWorkInstruction()" ng-disabled="!vm.formsTable.getSelection().length">Delete
+      Instruction</jqx-button>
+    <div class="wi-btn-right"> <jqx-button class="wi-btn-row" jqx-settings="::vm.settings.btn"
+                                           ng-click="vm.addSection()" ng-disabled="!vm.formsTable.getSelection().length">Add Section</jqx-button>
+      <jqx-button class="wi-btn-row" jqx-settings="::vm.settings.btn" ng-click="vm.deleteSection()"
+                  ng-disabled="!vm.sectionsTable.getSelection().length">Delete Section</jqx-button> <jqx-button
+        class="wi-btn-row" jqx-settings="::vm.settings.btn" ng-click="vm.editSection()"
+        ng-disabled="!vm.sectionsTable.getSelection().length">Edit Section</jqx-button> <jqx-button
+        class="wi-btn-row" jqx-settings="::vm.settings.btn" ng-click="vm.moveSections()"
+        ng-disabled="!vm.formsTable.getSelection().length||!vm.formsTable.getSelection()[0].sections.length">Move
+        Sections</jqx-button> </div>
+  </div>
+  <div class="clear"></div>
+  <div class="wi-datatable">
+    <jqx-data-table jqx-instance="vm.formsTable" jqx-settings="::vm.settings.formsTable"
+                    jqx-on-row-select="vm.formSelected()" jqx-on-row-unselect="vm.formUnselected()"></jqx-data-table>
+  </div>
+  <div class="sections-datatable"> <jqx-data-table jqx-instance="vm.sectionsTable"
+                                                   jqx-settings="::vm.settings.sectionsTable" jqx-on-row-select="vm.sectionSelected()"
+                                                   jqx-on-row-unselect="vm.sectionUnselected()"></jqx-data-table> </div>
+</div>
+</body>
+</html>

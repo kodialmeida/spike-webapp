@@ -2,12 +2,31 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <meta name="author" content="HAL Software Limited">
+  <meta name="Copyright" content="Copyright (c) 2015 HAL Software limited. All rights reserved.">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
   <title>Spike</title>
   <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="shortcut icon" href="images/favicon.ico">
+  <link href="styles/loading-bar.css?v=1.0.4" rel="stylesheet">
+  <link href="styles/bootstrap.css?v=1.0.4" rel="stylesheet">
+  <link href="styles/app.css?v=1.0.4" rel="stylesheet">
 </head>
-<body>
-  <app-root></app-root>
+<body ng-controller="AppController as vm">
+<div class="view" ui-view=""></div>
+<script src="scripts/jquery-1.11.1.js?v=1.0.4"></script>
+<script src="scripts/angular.js?v=1.0.4"></script>
+<script src="scripts/angular-messages.js?v=1.0.4"></script>
+<script src="scripts/angular-ui-router.js?v=1.0.4"></script>
+<script src="scripts/angular-local-storage.js?v=1.0.4"></script>
+<script src="scripts/loading-bar.js?v=1.0.4"></script>
+<script src="scripts/jqx-all.js?v=1.0.4"></script>
+<script src="scripts/jqxangular.js?v=1.0.4"></script>
+<script src="scripts/moment.js?v=1.0.4"></script>
+<script src="scripts/app.js?v=1.0.4"></script>
+<app-root></app-root>
 </body>
 </html>
+
+

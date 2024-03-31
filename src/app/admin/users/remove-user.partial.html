@@ -1,0 +1,24 @@
+<div class="tab" ng-controller="RemoveUserController as vm">
+  <form class="form" name="vm.form" novalidate autocomplete="off">
+    <table>
+      <tr>
+        <td><label>User:</label></td>
+        <td><select name="user" ng-model="vm.user"
+                    ng-options="user as user.userName + \' (\' + user.name + \')\' for user in admin.users | orderBy:\'userName\'"></select>
+        </td>
+        <td>
+          <div class="error" ng-messages="vm.form.user.$error">
+            <div class="error-message" ng-message="required">Required....</div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2" style="text-align: center">
+          <button class="form-submit-btn btn btn-success" ng-disabled="!vm.form.$valid" ng-click="vm.remove(vm.user)">
+            Remove
+          </button>
+        </td>
+      </tr>
+    </table>
+  </form>
+</div>

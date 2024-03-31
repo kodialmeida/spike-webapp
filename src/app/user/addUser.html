@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Create User</title>
+</head>
+<body>
+<h2>Create User</h2>
+<form id="userForm">
+  <label for="role">Role:</label><br>
+  <select id="role" name="role" required>
+    <option value="Admin">Admin</option>
+    <option value="User">User</option>
+  </select><br>
+  <label for="firstName">First Name:</label><br>
+  <input type="text" id="firstName" name="firstName" required><br>
+  <label for="lastName">Last Name:</label><br>
+  <input type="text" id="lastName" name="lastName" required><br>
+  <label for="email">Email:</label><br>
+  <input type="email" id="email" name="email" required><br>
+  <label for="userName">Username:</label><br>
+  <input type="text" id="userName" name="userName" required><br>
+  <label for="password">Password:</label><br>
+  <input type="password" id="password" name="password" required><br>
+  <button type="submit">Create User</button>
+</form>
+
+<script src="addUser.js"></script>
+</body>
+</html>
